@@ -3,7 +3,9 @@ import { Sidebar } from "../components/Sidebar"
 export const HomeDashboard = () =>{
     return (
         <>
+        <div className="w-full lg:w-[1024px] m-auto flex flex-col justify-start relative">
         <Sidebar/>
+
         <header className="h-14 bg-blue-950 flex flex-row justify-between text-white"> 
             <div className="w-2/12 flex flex-row justify-center items-center">
                 <button className="bg-transparent hover:bg-blue-500 font-semibold">
@@ -16,6 +18,8 @@ export const HomeDashboard = () =>{
             <section className="h-full bg-gray-200">esto es el cuerpo</section>
         </main>
         <footer className="h-14 bg-blue-950 flex justify-center items-center text-white">esto es el footer</footer>
+
+        </div>
         </>
     )
 }
