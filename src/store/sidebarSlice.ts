@@ -13,10 +13,17 @@ const initialState: SidebarState  ={
 export const sidebarSlice=createSlice({
     name:'sideBar',
     initialState,
-    reducers:{},
+    reducers:{
+        openSideBar:(state) => {
+            state.value=true;
+        },
+         closeSideBar:(state) => {
+            state.value=false;
+        },
+    },
 })
 
 
-export const {  } = counterSlice.actions
+export const { openSideBar, closeSidebar } = sidebarSlice.actions;
 
 export default counterSlice.reducer
