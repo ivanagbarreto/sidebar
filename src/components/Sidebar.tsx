@@ -1,6 +1,11 @@
 import {Link} from "react-router"
+import { useAppDispatch, useAppSelector } from "../store/store";
+import {closeSideBar} from "../store/sidebarSlice"
 
 export const Sidebar = () =>{
+
+    const isSidebarOpen= useAppSelector ((state) => state.isSideBarOpen.value);
+    const dispatch = useAppDispatch();
     return(
         <nav className="absolute top-0 bg-red-50 h-full w-[200px] -left-[200px]">
             <div className="h-[100px] p-5 flex justify-center items-center ">
@@ -11,18 +16,21 @@ export const Sidebar = () =>{
             <div>
                 <Link to={"#"}
                 className="flex flex-row mt-5"
+                onClick = {() => dispatch (closeSideBar())}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width={20}><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
                     <span className="ml-3 text-xl"> Perfil </span>
                 </Link>
                                 <Link to={"#"}
                 className="flex flex-row mt-5"
+                onClick = {() => dispatch (closeSideBar())}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width={20}><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
                     <span className="ml-3 text-xl"> Ordenes </span>
                 </Link>
                                 <Link to={"#"}
                 className="flex flex-row mt-5"
+                onClick = {() => dispatch (closeSideBar())}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width={20}><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
                     <span className="ml-3 text-xl"> Productos </span>

@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 
 export interface SidebarState{
-    value: boolean,
+    value: boolean;
 }
 
 const initialState: SidebarState  ={
@@ -15,15 +15,15 @@ export const sidebarSlice=createSlice({
     initialState,
     reducers:{
         openSideBar:(state) => {
-            state.value=true;
+            state.value = true;
         },
          closeSideBar:(state) => {
-            state.value=false;
+            state.value = false;
         },
     },
 })
 
 
-export const { openSideBar, closeSidebar } = sidebarSlice.actions;
+export const { openSideBar, closeSideBar } = sidebarSlice.actions;
 
-export default counterSlice.reducer
+export default sidebarSlice.reducer;
